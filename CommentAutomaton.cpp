@@ -2,7 +2,7 @@
 #include <cctype>
 
 void CommentAutomaton::S0(const std::string& input) {
-    if (index == (int)input.size()){
+    if (index == input.size()){ // took out int
         Serr();
     }
     if (input[index] == '#') {
