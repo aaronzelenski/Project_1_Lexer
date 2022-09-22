@@ -72,7 +72,7 @@ void Lexer::Run(std::string& input) {
 
 
         // TODO: you need to handle whitespace inbetween tokens
-        for(int i = 0; i < automata.size(); i++) {
+        for(int i = 0; i < (int)automata.size(); i++) {
             int inputRead = automata[i]->Start(input);
             if (inputRead > maxRead) {
                 maxRead = inputRead;
@@ -99,7 +99,7 @@ void Lexer::Run(std::string& input) {
     auto *eofToken = new Token(TokenType::EOF_TYPE, "", lineNumber);
     tokens.push_back(eofToken);
 
-    for( int i = 0; i < tokens.size(); i++){
+    for( int i = 0; i < (int)tokens.size(); i++){
         cout << tokens.at(i)->toString();
         cout << endl;
     }

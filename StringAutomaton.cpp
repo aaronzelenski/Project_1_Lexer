@@ -11,7 +11,7 @@ void StringAutomaton::S0(const std::string& input) {
     }
 }
 void StringAutomaton::S1(const std::string& input) {
-    if (index == input.size()) {
+    if (index == (int)input.size()) {
         Serr();
     }
     if (input[index] == '\'') {
@@ -29,7 +29,7 @@ void StringAutomaton::S1(const std::string& input) {
     }
 }
 void StringAutomaton::S2(const std::string& input) {
-    if (index == input.size()) {
+    if (index == (int)input.size()) {
         Serr();
     }
     if (input[index] == '\'') {

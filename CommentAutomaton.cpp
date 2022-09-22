@@ -2,7 +2,7 @@
 #include <cctype>
 
 void CommentAutomaton::S0(const std::string& input) {
-    if (index == input.size()){
+    if (index == (int)input.size()){
         Serr();
     }
     if (input[index] == '#') {
@@ -30,7 +30,7 @@ void CommentAutomaton::S1(const std::string& input) {
 
         S1(input);
     }
-    else if (index == input.size()){
+    else if (index == (int)input.size()){
         index++;
         newLines++;
         return;
@@ -53,7 +53,7 @@ void CommentAutomaton::S2(const std::string& input) {
             return;
         }
     }
-    if(index == input.size()) {
+    if(index == (int)input.size()) {
         Serr();
     }
     else {
